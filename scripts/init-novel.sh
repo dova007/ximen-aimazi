@@ -19,7 +19,9 @@ LEARNINGS_DIR="$SKILL_DIR/.learnings"
 MEMORY_DIR="$SKILL_DIR/memory"
 SESSION_FILE="$SKILL_DIR/SESSION.md"
 NOVEL_NAME_FILE="$SKILL_DIR/.novel-name"
-PROMPT_FILE="$OUTPUT_DIR/提示词.md"
+TRACKING_DIR="$SKILL_DIR/追踪"
+OUTLINE_DIR="$SKILL_DIR/大纲"
+PROMPT_FILE="$SKILL_DIR/设定/提示词.md"
 PROJECT_STATUS_FILE="$MEMORY_DIR/project_status.md"
 
 usage() {
@@ -79,7 +81,7 @@ write_session_file() {
 - **创作流程阶段**: 未开始（1灵感 → 2世界观 → 3角色 → 4参数 → 5同人资料(如适用) → 6大纲 → 7细纲规划（分批） → 8生成细纲（当前批次） → 9逻辑审核 / 人工介入 / 冻结 → 10正文 → 11一致性审核 → 12润色与评分）
 - **已生成章节**: 0
 - **当前章节**: —
-- **下一步操作**: 完善 output/提示词.md，并让 AI 先给出 3 套创意方案
+- **下一步操作**: 完善 设定/提示词.md，并让 AI 先给出 3 套创意方案
 
 ## 文风/擦边激活状态
 
@@ -89,7 +91,7 @@ write_session_file() {
 
 ## 待办清单
 
-- [ ] 完善 output/提示词.md
+- [ ] 完善 设定/提示词.md
 - [ ] 执行灵感生成（3套方案）
 - [ ] 用户选择方案
 - [ ] 构建世界观
@@ -111,7 +113,7 @@ write_session_file() {
 
 | 时间 | 操作 | 结果 | 变更文件 |
 |------|------|------|---------|
-| 初始化 | 创建新项目工作区 | 完成 | SESSION.md, output/提示词.md, output/CHAPTERS.md, output/细纲迭代记录.md, output/细纲干预决策.md, output/细纲冻结清单.md |
+| 初始化 | 创建新项目工作区 | 完成 | SESSION.md, 设定/提示词.md, 追踪/CHAPTERS.md, 大纲/细纲迭代记录.md, 大纲/细纲干预决策.md, 大纲/细纲冻结清单.md |
 EOF
 }
 
@@ -139,7 +141,7 @@ type: project
 - **当前步骤**：未开始（灵感）
 - **已完成章节**：0
 - **最后操作**：初始化工作区
-- **下一步**：完善 output/提示词.md，并生成 3 套创意方案
+- **下一步**：完善 设定/提示词.md，并生成 3 套创意方案
 
 ## 历史项目
 
@@ -150,7 +152,7 @@ _（暂无记录）_
 
 ## 待办事项
 
-- [ ] 完善 output/提示词.md
+- [ ] 完善 设定/提示词.md
 - [ ] 生成 3 套创意方案
 - [ ] 继续世界观与角色设计
 
@@ -242,11 +244,12 @@ echo -e "  小说名称: ${GREEN}《${NOVEL_NAME}》${NC}"
 echo -e "  清除旧数据: $([ "$CLEAN" = true ] && echo "是" || echo "否")"
 echo ""
 
-mkdir -p "$OUTPUT_DIR" "$LEARNINGS_DIR" "$MEMORY_DIR"
+mkdir -p "$TRACKING_DIR" "$OUTLINE_DIR" "$LEARNINGS_DIR" "$MEMORY_DIR"
 
 if [ "$CLEAN" = true ]; then
     log_step "清除旧的输出文件"
-    find "$OUTPUT_DIR" -maxdepth 1 -type f -name '*.md' -delete 2>/dev/null || true
+    find "$TRACKING_DIR" -maxdepth 1 -type f -name '*.md' -delete 2>/dev/null || true
+    find "$OUTLINE_DIR" -maxdepth 1 -type f -name '*.md' -delete 2>/dev/null || true
 fi
 
 log_step "同步项目级模板"
@@ -261,23 +264,22 @@ copy_template ".learnings/EMOTIONS.md"
 copy_template ".learnings/SUSPENSE.md"
 copy_template "memory/project_params.md"
 copy_template "memory/project_style.md"
-copy_template "output/CHAPTERS.md"
-copy_template "output/细纲迭代记录.md"
-copy_template "output/细纲干预决策.md"
-copy_template "output/细纲冻结清单.md"
+copy_template "追踪/CHAPTERS.md"
+copy_template "大纲/细纲迭代记录.md"
+copy_template "大纲/细纲干预决策.md"
+copy_template "大纲/细纲冻结清单.md"
 
 log_step "写入会话与提示词入口"
 write_session_file
 write_project_status_file
 write_prompt_file
 printf '%s\n' "$NOVEL_NAME" > "$NOVEL_NAME_FILE"
-touch "$OUTPUT_DIR/.gitkeep"
 
 echo ""
 log_info "《${NOVEL_NAME}》工作区初始化完成"
 echo ""
 echo "后续步骤:"
-echo "  1. 完善 output/提示词.md"
+echo "  1. 完善 设定/提示词.md"
 echo "  2. 让 AI 先生成 3 套创意方案"
 echo "  3. 确认方案后进入世界观、角色和创作参数配置"
 echo "  4. 再推进大纲、细纲、审核和正文"

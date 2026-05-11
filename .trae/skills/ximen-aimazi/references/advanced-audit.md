@@ -26,7 +26,7 @@
 ## 审稿前必读文件
 
 - `SESSION.md`
-- `output/CHAPTERS.md`
+- `追踪/CHAPTERS.md`
 - `.learnings/CHARACTERS.md`
 - `.learnings/LOCATIONS.md`
 - `.learnings/PLOT_POINTS.md`

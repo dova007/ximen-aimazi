@@ -11,6 +11,9 @@ Thumbs.db
 # Claude Code 运行时数据
 .claude/sessions/
 
+# Kiro 开发过程文件（spec/tasks，不属于 Skill 本身）
+.kiro/
+
 # 生成输出（可选择性提交，但默认保留）
 # 如果只想保留模板，取消下面一行的注释：
 # output/第*.md

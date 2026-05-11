@@ -1,5 +1,20 @@
 # 更新日志
 
+## v2.1.0-patch1 骨架一致性修复（勘误）
+
+**修复内容：**
+- 统一5种预设文风 A/B/C/D/E 命名，以 `assets/STYLE-TEMPLATE.md` 为权威，同步至 README、双语 SKILL、interactive-prompts
+- 统一章节索引路径为 `追踪/CHAPTERS.md`，清除全仓库 `output/CHAPTERS.md` 残留引用（排除历史条目）
+- 升级 `SKILL.en.md` 至 v2.1.0：修正版本号、作者字段、移除已删除的 `style-modules.md` 引用、补充8个新增参考文件
+- 同步 `.trae/skills/ximen-aimazi/SKILL.md` 镜像与根目录完全一致
+- 精简 `_meta.json` changelog 字段（历史详情见 CHANGELOG.md）
+- 修复 `references/interactive-prompts.md` Phase 12 评分权重（角色塑造 10%→8%，去AI味 10%→7%，合计恢复100%）
+- 补齐 SKILL.md Phase 2/3/4/7 的"输出文件"段，使前置依赖矩阵可追溯
+- 修复 `assets/workspace/SESSION.md` 模板路径（output/ → 追踪/ 和 大纲/）
+- 删除已完成的施工计划草稿 `.trae/documents/optimize-ximen-aimazi-skill.md`
+
+---
+
 ## v2.1.0 (2026-05-06)
 
 ### 全面优化：结构重构 + 内容增强 + 工程化

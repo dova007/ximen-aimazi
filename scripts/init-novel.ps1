@@ -101,7 +101,7 @@ $PromptFileName = Join-Chars @(25552, 31034, 35789, 46, 109, 100)
 $OutlineIterationFileName = Join-Chars @(32454, 32434, 36845, 20195, 35760, 24405, 46, 109, 100)
 $OutlineInterventionFileName = Join-Chars @(32454, 32434, 24178, 39044, 20915, 31574, 46, 109, 100)
 $OutlineFreezeFileName = Join-Chars @(32454, 32434, 20923, 32467, 28165, 21333, 46, 109, 100)
-$PromptFile = Join-Path $OutputDir $PromptFileName
+$PromptFile = Join-Path $SkillDir (Join-Path "设定" $PromptFileName)
 $ProjectStatusFile = Join-Path $MemoryDir "project_status.md"
 
 $ExistingNovelName = ""
@@ -123,15 +123,19 @@ Write-Host "  novel: $NovelName"
 Write-Host "  clean: $Clean"
 Write-Host ""
 
-foreach ($Directory in @($OutputDir, $LearningsDir, $MemoryDir)) {
+$TrackingDir = Join-Path $SkillDir "追踪"
+$OutlineDir = Join-Path $SkillDir "大纲"
+
+foreach ($Directory in @($LearningsDir, $MemoryDir, $TrackingDir, $OutlineDir)) {
     if (-not (Test-Path -LiteralPath $Directory)) {
         New-Item -ItemType Directory -Path $Directory -Force | Out-Null
     }
 }
 
 if ($Clean) {
-    Write-Step "Removing generated markdown files from output/"
-    Get-ChildItem -LiteralPath $OutputDir -Filter "*.md" -File -ErrorAction SilentlyContinue | Remove-Item -Force
+    Write-Step "Removing generated markdown files from 追踪/ and 大纲/"
+    Get-ChildItem -LiteralPath $TrackingDir -Filter "*.md" -File -ErrorAction SilentlyContinue | Remove-Item -Force
+    Get-ChildItem -LiteralPath $OutlineDir -Filter "*.md" -File -ErrorAction SilentlyContinue | Remove-Item -Force
 }
 
 $TemplateFiles = @(
@@ -146,10 +150,10 @@ $TemplateFiles = @(
     ".learnings\SUSPENSE.md",
     "memory\project_params.md",
     "memory\project_style.md",
-    "output\CHAPTERS.md",
-    "output\$OutlineIterationFileName",
-    "output\$OutlineInterventionFileName",
-    "output\$OutlineFreezeFileName"
+    "追踪\CHAPTERS.md",
+    "大纲\$OutlineIterationFileName",
+    "大纲\$OutlineInterventionFileName",
+    "大纲\$OutlineFreezeFileName"
 )
 
 Write-Step "Syncing project-level templates"
@@ -160,7 +164,7 @@ foreach ($TemplateFile in $TemplateFiles) {
 Write-Step "Writing session and prompt entry files"
 Write-TemplateFile -TemplateRelativePath "SESSION.md" -DestinationPath $SessionFile -NovelName $NovelName -Force:$Clean
 Write-TemplateFile -TemplateRelativePath "memory\project_status.md" -DestinationPath $ProjectStatusFile -NovelName $NovelName -Force:$Clean
-Write-TemplateFile -TemplateRelativePath "output\PROMPT.md.template" -DestinationPath $PromptFile -NovelName $NovelName -Force:$Clean
+Write-TemplateFile -TemplateRelativePath "设定\提示词.md.template" -DestinationPath $PromptFile -NovelName $NovelName -Force:$Clean
 Set-Content -LiteralPath $NovelNameFile -Value $NovelName -Encoding utf8
 
 $Gitkeep = Join-Path $OutputDir ".gitkeep"
@@ -172,7 +176,7 @@ Write-Host ""
 Write-Info "Workspace initialized for '$NovelName'."
 Write-Host ""
 Write-Host "Next steps:"
-Write-Host "  1. Refine output/$PromptFileName"
+Write-Host "  1. Refine 设定/$PromptFileName"
 Write-Host "  2. Ask the AI for 3 concept options"
 Write-Host "  3. Continue with worldbuilding, characters, and project params"
 Write-Host "  4. Then move into outline, chapter plan, review, and drafting"

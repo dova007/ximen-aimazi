@@ -4,8 +4,8 @@ description: "Full-pipeline web novel writing assistant. Structured workflow fro
 license: MIT
 compatibility: "Works with Claude Code, Cursor, OpenAI Codex, GitHub Copilot, and other Agent Skills compatible tools. Requires file read/write permissions."
 metadata:
-  author: kimo
-  version: "2.0.0"
+  author: ximencuisu
+  version: "2.1.0"
   language: en
   category: creative-writing
   tags: "novel, fiction, creative-writing, story-generation, web-novel"
@@ -249,11 +249,11 @@ None (pure plot) / Light (occasional tension) / Medium (regular scenes) / Heavy 
 
 | Style | Character | Suitable Genres |
 |-------|-----------|-----------------|
-| A Hot-blooded Action | Short sentences, fast rhythm, decisive face-slaps | Xianhuan, high martial, leveling |
-| B Urban Realism | Colloquial, slice-of-life, authentic detail | Urban, suspense, rule-horror |
-| C Classical Xianxia | Semi-literary, atmospheric, measured pace | Xianxia, historical, wuxia |
-| D Suspense/Horror | Oppressive atmosphere, layered clues, reversals | Suspense, rule-horror, post-apocalyptic |
-| E Slice-of-life | High snark, relaxed pace, warm interactions | Farming, beast-taming, daily |
+| A Hot-blooded Action | Fast rhythm, dense satisfaction points, decisive face-slaps | Xianhuan, high martial, leveling |
+| B Urban Realism | Close to reality, down-to-earth, natural dialogue | Urban, suspense, rule-horror |
+| C Classical Xianxia | Classical prose flavor, deep atmosphere, impressionistic combat | Xianxia, historical, wuxia |
+| D Suspense/Horror | Oppressive atmosphere, layered suspense, unexpected reversals | Suspense, horror, post-apocalyptic |
+| E Slice-of-life | Light humor, fun daily life, lovable character interactions | Farming, beast-taming, daily |
 
 ---
 
@@ -466,7 +466,7 @@ Follow these anti-AI rules during writing to eliminate AI traces from the source
 |------|---------|
 | `.learnings/PLOT_POINTS.md` | Key events |
 | `.learnings/SUSPENSE.md` | Foreshadowing planted / resolved |
-| `output/CHAPTERS.md` | Chapter index append |
+| `追踪/CHAPTERS.md` | Chapter index append |
 | `SESSION.md` | Session state update |
 
 **Must check, write if changed**:
@@ -686,7 +686,15 @@ Must read all active `.learnings/` files before generating each chapter:
 | `references/opening-design.md` | Designing openings |
 | `references/character-design.md` | Deep character design |
 | `references/genre-frameworks-unified.md` | Genre frameworks |
-| `references/style-modules.md` | Writing style modules |
+| `references/style-index.md` | Style module index (11 sub-files) |
+| `references/female-genre-guide.md` | Female-oriented genre guide |
+| `references/female-character-design.md` | Female-oriented character design |
+| `references/female-opening-design.md` | Female-oriented opening design |
+| `references/platform-guide.md` | Platform adaptation guide |
+| `references/writing-basics.md` | Writing basics and techniques |
+| `references/writing-craft.md` | Writing craft and polish |
+| `references/market-methodology.md` | Commercial web novel methodology |
+| `references/creative-strategy.md` | Creative strategy and methods |
 | `references/outline-arrangement.md` | Building outlines |
 | `references/emotional-arc-design.md` | Emotional arc design |
 | `references/reversal-toolkit.md` | Designing reversals |
