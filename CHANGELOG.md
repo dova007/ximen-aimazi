@@ -1,42 +1,35 @@
 # 更新日志
 
-## v2.1.0-patch1 骨架一致性修复（勘误）
+## v2.1.1 (2026-05-15)
 
-**修复内容：**
-- 统一5种预设文风 A/B/C/D/E 命名，以 `assets/STYLE-TEMPLATE.md` 为权威，同步至 README、双语 SKILL、interactive-prompts
-- 统一章节索引路径为 `追踪/CHAPTERS.md`，清除全仓库 `output/CHAPTERS.md` 残留引用（排除历史条目）
-- 升级 `SKILL.en.md` 至 v2.1.0：修正版本号、作者字段、移除已删除的 `style-modules.md` 引用、补充8个新增参考文件
-- 同步 `.trae/skills/ximen-aimazi/SKILL.md` 镜像与根目录完全一致
-- 精简 `_meta.json` changelog 字段（历史详情见 CHANGELOG.md）
-- 修复 `references/interactive-prompts.md` Phase 12 评分权重（角色塑造 10%→8%，去AI味 10%→7%，合计恢复100%）
-- 补齐 SKILL.md Phase 2/3/4/7 的"输出文件"段，使前置依赖矩阵可追溯
-- 修复 `assets/workspace/SESSION.md` 模板路径（output/ → 追踪/ 和 大纲/）
-- 删除已完成的施工计划草稿 `.trae/documents/optimize-ximen-aimazi-skill.md`
+### 全面优化与修复
 
----
+**断裂引用修复**：
+- 修复 SKILL.md 中 30+ 个指向不存在文件的引用，全部重定向到已有文件
+- 移除 `interactive-prompts.md` 等未使用引用
+- 统一文件路径：`追踪/伏笔.md` → `.learnings/SUSPENSE.md`
 
-## v2.1.0 (2026-05-06)
+**去AI味规则优化**：
+- 绝对禁止 → 按题材分级（热血限制/古风放宽/都市严格）
+- 禁语表 → 频率限制版（每章/每卷次数控制）
+- 新增文风例外说明章节
+- 新增擦边描写与去AI味规则优先级表
 
-### 全面优化：结构重构 + 内容增强 + 工程化
+**记忆系统增强**：
+- MEMORY.md 增加 `.learnings/` vs `memory/` 职责边界清晰表格
+- 增加 9 个真相档案详细说明
+- 增加自动归档触发规则（角色死亡/30章未出场/伏笔回收等）
 
-**结构重构：**
-- 拆分 `style-modules.md`（2500+行）为15个独立参考文件 + 1个索引文件
-- 精简 `SKILL.md` 从1069行至406行（减少62%），详细内容改为引用 references/
-- 修复文件路径不一致（统一使用逻辑路径：大纲/正文/设定/追踪/）
-- 清理根目录与 .trae/skills/ 间的文件重复
+**交互体验提升**：
+- Phase 4 新增三种创作模式（快速/标准/深度）
+- 参数配置改为渐进式询问 + 智能推荐
+- 新增用户偏好学习机制
 
-**内容增强：**
-- 新增女频专项模块：`female-genre-guide.md`、`female-character-design.md`、`female-opening-design.md`
-- 新增平台适配指南：`platform-guide.md`（起点/番茄/刺猬猫/飞卢/晋江/七猫）
-- 补强 `chapter-outline.md`（33行→200+行完整批次化规范）
-- 更新 `interactive-prompts.md` 为12步流程 + 增强模式提示词
-- 扩充 `examples.md`（新增都市重生/女频甜宠/规则怪谈/去AI味改写/卡文救援示例）
-
-**工程化：**
-- 新增 `plugin.json` 标准打包配置
-- 优化 Skill 触发描述（精简至90字符）
-- 新增"按需加载参考文件"指引（15个场景映射）
-- 更新 `.claude/CLAUDE.md` 路径规范和参考文件列表
+**其他**：
+- output/CHAPTERS.md 增加分页/摘要机制（50章以上自动归档）
+- 新增 Troubleshooting 章节（8 个常见问题）
+- 修正 CHANGELOG v1.4.0/v1.5.0 日期冲突
+- anti-ai-detection.md 编号一致性修复
 
 ---
 
@@ -84,7 +77,7 @@
 
 ---
 
-## v1.5.0 (2026-03-25)
+## v1.5.0 (2026-03-26)
 
 ### 联网选材与题材分类
 

@@ -3,7 +3,7 @@
 中文网文创作 Agent Skill — 从灵感到成稿的结构化创作 + 去 AI 味 + 深度技法。
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
-[![Version](https://img.shields.io/badge/version-v2.1.0-green)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v2.1.1-green)](./CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ## 这是什么
@@ -58,10 +58,11 @@
 
 ### 去 AI 味
 
+- 按题材分级使用修辞（热血限制/古风放宽/都市严格）
+- 禁语表频率控制（每章/每卷次数限制，非绝对禁止）
+- 文风例外说明 + 擦边描写优先级规则
 - 6 门禁：禁用词替换 → 句式去套路 → 心理描写外化 → 节奏打碎 → 对话去腔调 → 结尾去升华
-- 禁用词表 + 比喻禁令 + 章末禁止总结升华
 - 三遍法：去泛化 → 去书面化 → 回人味
-- 7 维评分中"去 AI 味"占 7% 权重，独立打分
 
 ### 质量评分（7 维 10 分制）
 
@@ -76,6 +77,14 @@
 | 去 AI 味 | 7% |
 
 出稿门槛：日更 ≥ 7.0 / 高潮章 ≥ 8.0 / 卷终章 ≥ 8.2
+
+### 创作模式
+
+| 模式 | 适用场景 | 流程 |
+|------|---------|------|
+| 🚀 快速模式 | 只想快速生成一章试试 | 跳过 Phase 1-3 详细设定，直接进入 Phase 6-10 |
+| 📖 标准模式（默认） | 正常创作流程 | 完整 Phase 1-12 |
+| 🔬 深度模式 | 精细打磨大纲+编辑部流水线 | 完整 Phase 1-12 + 编辑部流水线 + 深度审稿 |
 
 ### 4 种增强模式
 
@@ -129,7 +138,7 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 
 ## 参考文件体系
 
-v2.1.0 将原 `style-modules.md`（2500+ 行）拆分为按需加载的独立模块，大幅降低单次 token 消耗。
+v2.1.1 全面优化：修复所有断裂引用，去AI味规则改为按题材分级+频率控制，记忆系统增加职责边界和自动归档规则，新增三种创作模式和用户偏好学习。
 
 ### 题材风格模块
 
@@ -174,27 +183,14 @@ v2.1.0 将原 `style-modules.md`（2500+ 行）拆分为按需加载的独立模
 
 | 文件 | 内容 |
 |------|------|
-| `anti-ai-writing.md` | 去 AI 味完整指南（6 门禁 + 三遍法） |
-| `anti-ai-detection.md` | 去 AI 味检测清单 |
-| `banned-words.md` | 禁用词表 |
-| `quality-check.md` | 7 维 10 分制评分系统 |
-| `hook-techniques.md` | 钩子技法大全（章尾 13 式 + 章首 7 式） |
+| `anti-ai-detection.md` | 去 AI 味检测清单（按题材分级+频率控制） |
+| `quality-check.md` | 质量评分系统 |
 | `continuation-engine.md` | 半部续写引擎 |
 | `editorial-pipeline.md` | 编辑部流水线 |
 | `advanced-audit.md` | 深度审稿清单 |
-| `advanced-plot-techniques.md` | 60+ 高级剧情技法 |
 | `author-style-guide.md` | 作家技法参考库 |
-| `character-design.md` | 角色设计完整指南 |
-| `dialogue-mastery.md` | 对话写作技法 |
-| `emotional-arc-design.md` | 情绪弧线设计 |
-| `genre-frameworks-unified.md` | 题材框架统一指南 |
-| `opening-design.md` | 开头设计 |
-| `outline-arrangement.md` | 大纲编排法 |
 | `plot-structures.md` | 剧情结构 |
-| `reversal-toolkit.md` | 反转工具箱 |
-| `narrative-units.md` | 叙事单元设计 |
 | `chapter-outline.md` | 细纲批次化规范 |
-| `artifact-protocols.md` | 文件模板与创建指引 |
 | `examples.md` | 多题材创作示例 |
 | `interactive-prompts.md` | 12 步流程交互提示词 |
 | `prompt-guide.md` | 提示词编写指南 |
