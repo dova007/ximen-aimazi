@@ -49,6 +49,20 @@ Phase 12 Polish & Score
 
 For the full Chinese operational details, see `SKILL.md`.
 
+### Reference Loading Enforcement
+
+Reference files are not optional background material. Fast mode may skip long discussion, but it must not skip required internal reference loading. Each outline, chapter plan, draft, polish pass, and audit summary must list the references read and the techniques actually applied.
+
+| Phase | Required references |
+|-------|---------------------|
+| Phase 1-2 | `genre-frameworks-unified.md`, `market-methodology.md`, `creative-strategy.md` |
+| Phase 3 | `character-design.md` |
+| Phase 4 | `assets/STYLE-TEMPLATE.md`, `author-style-guide.md`, `style-index.md`; write `memory/project_style.md` |
+| Phase 6 | `memory/project_style.md`, `outline-arrangement.md`, `plot-structures.md`, `advanced-plot-techniques.md`, `hook-techniques.md` |
+| Phase 7-9 | `memory/project_style.md`, `chapter-outline.md`, `hook-techniques.md`, `advanced-plot-techniques.md` |
+| Phase 10 | `memory/project_style.md`, `assets/CHAPTER-TEMPLATE.md`, `writing-basics.md`, `writing-craft.md`, matching `style-*.md`, `hook-techniques.md`, `anti-ai-writing.md` |
+| Phase 11-12 | `quality-check.md`, `quality-checklist.md`, `anti-ai-detection.md`, `anti-ai-writing.md`; key chapters also load `advanced-audit.md` |
+
 ### v2.3 Interaction Decision Points
 
 The workflow has two interaction modes:
@@ -256,6 +270,20 @@ None (pure plot) / Light (occasional tension) / Medium (regular scenes) / Heavy 
 | Medium | 15-25% | Every 4-6 chapters |
 | Heavy | 30-40% | Every 2-3 chapters |
 
+#### Parameter 4: Base Style
+
+```
+A Hot-blooded / B Urban realism / C Classical xianxia / D Suspense-horror / E Slice-of-life / custom
+```
+
+#### Parameter 5: Author Technique Reference
+
+```
+AI recommends 1 primary + 1 secondary / user chooses 1 primary + 1 secondary / disabled
+```
+
+If enabled, author references only affect rhythm, structure, hooks, conflict handling, and character handling. Do not imitate sentences or copy signature scenes. The final choice must be written to `memory/project_style.md`.
+
 ### 5 Style Presets
 
 > Full style preset library (sentence requirements, prohibitions, pacing, mixing guide) see `assets/STYLE-TEMPLATE.md`, author technique reference see `references/author-style-guide.md`. Workflow: pick 1 base style → optionally add 1 auxiliary element → optionally stack 1 primary + 1 secondary author technique → write to `memory/project_style.md`.
@@ -304,6 +332,11 @@ Ask: Is this a fanfic? If yes, choose:
 
 - `设定/题材定位.md` — missing → complete Phase 1-2 first
 - `设定/创作参数.md` — missing → complete Phase 4 first
+- `memory/project_style.md` — missing → complete Phase 4 first
+
+### Required References
+
+Before generating outline directions, read `memory/project_style.md`, `outline-arrangement.md`, `plot-structures.md`, `advanced-plot-techniques.md`, and `hook-techniques.md`. The outline must include reference call records, satisfaction-loop design, expectation chain, climax escalation, and author-technique mapping.
 
 ### Five-Step Method
 
@@ -325,6 +358,7 @@ Ask: Is this a fanfic? If yes, choose:
 
 - `大纲/大纲.md`: Full book volume structure
 - `大纲/卷纲_第X卷.md`: Satisfaction rhythm + emotional arc + character arc per volume
+- Stage summary: list references read and 3-5 techniques applied
 
 ---
 
@@ -335,6 +369,10 @@ Ask: Is this a fanfic? If yes, choose:
 ### Prerequisite Check
 
 - `大纲/大纲.md` — missing → complete Phase 6 first
+
+### Required References
+
+Read `memory/project_style.md`, `chapter-outline.md`, `hook-techniques.md`, and `advanced-plot-techniques.md`. Batch planning must state satisfaction delivery, expectation handoff, hook targets, and style/author-technique constraints.
 
 ### Planning Principles
 
@@ -370,6 +408,10 @@ Ask: Is this a fanfic? If yes, choose:
 
 - `大纲/细纲.md` — missing → complete Phase 7 first
 - `追踪/伏笔.md` — missing → Phase 7 output; create empty if not exists
+
+### Required References
+
+Read `memory/project_style.md`, `chapter-outline.md`, `hook-techniques.md`, and `advanced-plot-techniques.md`. Every chapter outline must include satisfaction type, emotional curve, story function, opening handoff, chapter-end hook, and applied reference/author technique.
 
 ### Generation Rules
 
@@ -412,12 +454,14 @@ Ask: Is this a fanfic? If yes, choose:
 | Setting | Power system, item origins, social rules, system bounds |
 | Foreshadowing | Planted, resolved, future承接 |
 | Reader feel | Chapter function clear, satisfaction delivered, hook effective |
+| Technique call completeness | Required references loaded, style bible followed, satisfaction/hook/source present |
 
 ### Freeze Conditions
 
 - No hard logic contradictions
 - Batch-promised satisfaction points delivered
 - Batch ending naturally leads to next
+- Required reference calls are complete
 - Human checkpoint completed
 
 ---
@@ -442,6 +486,8 @@ On failure: `"Cannot enter drafting: {missing item}. Please complete Phase {N} f
 2. `大纲/批次细纲/` — Current batch outline
 3. `追踪/伏笔.md` — Pending foreshadowing
 4. `设定/角色/{characters}.md` — Characters in this chapter
+
+Also read `memory/project_style.md`, `assets/CHAPTER-TEMPLATE.md`, `writing-basics.md`, `writing-craft.md`, matching `style-*.md`, `hook-techniques.md`, `anti-ai-writing.md`, and `banned-words.md`. Before drafting, show a chapter reference call list: style bible, author techniques, satisfaction type, hook type, rhythm target, and anti-AI constraints.
 
 ### Opening Design
 
@@ -470,6 +516,7 @@ Follow these anti-AI rules during writing to eliminate AI traces from the source
 ### Output
 
 - `正文/第XXX章_章名.md`
+- Draft summary: list the style constraints, author technique, satisfaction type, hook type, and rhythm target used
 
 ### Memory Write (mandatory after each chapter)
 
@@ -507,11 +554,14 @@ Follow these anti-AI rules during writing to eliminate AI traces from the source
 
 ### Check Dimensions
 
+Before auditing, read `quality-check.md`, `quality-checklist.md`, current chapter, current batch outline, `memory/project_style.md`, and this chapter's reference call list.
+
 | Dimension | Checks |
 |-----------|--------|
 | Core consistency | Plot matches outline/previous, character behavior matches personality, no setting contradictions |
 | Format consistency | Unified dialogue format, clear scene breaks, clear timeline |
 | Logic coherence | Reasonable character motivation, clear causation, timeline accuracy |
+| Technique call completeness | Style not drifting, satisfaction delivered, hook effective, author rhythm respected |
 
 > Full audit dimensions and scoring system see `references/quality-check.md` (7-dimension 10-point scale), checklist see `references/quality-checklist.md`.
 
@@ -524,6 +574,8 @@ Follow these anti-AI rules during writing to eliminate AI traces from the source
 > Phase 11 handles "consistency" (plot/character/setting), Phase 12 handles "language quality" (anti-AI/polish/scoring).
 
 ### Anti-AI Checks (must pass)
+
+Before polishing, read `memory/project_style.md`, `quality-check.md`, `quality-checklist.md`, `anti-ai-detection.md`, and `anti-ai-writing.md`; key climax or volume finale chapters also load `advanced-audit.md`. The polish summary must state which style/author/rhythm/dialogue/hook corrections were applied.
 
 > Full 3-pass method and rewrite examples see `references/anti-ai-writing.md`, detection checklist see `references/anti-ai-detection.md`, banned words see `references/banned-words.md`.
 
