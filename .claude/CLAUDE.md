@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-这是 **ximen-aimazi** 小说创作助手项目（v2.3.3），一个 Agent Skills 兼容的中文网络小说生成工具。
+这是 **ximen-aimazi** 小说创作助手项目（v2.4.0），一个 Agent Skills 兼容的中文网络小说生成工具。
 核心价值：从灵感到成稿的结构化创作流程，内置去AI味白描规范、质量评分、作家技法参考、续写救援和编辑部式审稿。
 
 ## 会话恢复
@@ -83,14 +83,15 @@
 - 深度审稿：`references/advanced-audit.md`
 - 情节结构：`references/plot-structures.md`（10种经典套路）
 - 题材风格索引：`references/style-index.md`
-- 女频题材指南：`references/female-genre-guide.md`
-- 女频角色设计：`references/female-character-design.md`
-- 女频开头设计：`references/female-opening-design.md`
+- 女频综合指南：`references/female-genre-guide.md`（题材框架+角色设计+开头设计）
 - 平台适配指南：`references/platform-guide.md`
 - 写作基础技巧：`references/writing-basics.md`
 - 文笔与写作工艺：`references/writing-craft.md`
 - 商业网文方法论：`references/market-methodology.md`
 - 创作策略与方法论：`references/creative-strategy.md`
+- 节奏控制指南：`references/pacing-guide.md`（爽点密度+情绪曲线+时间节奏）
+- 反派原型指南：`references/villain-archetypes.md`（7种反派类型+设计模式）
+- 长篇可持续性：`references/long-form-sustainability.md`（200+章节奏管理+世界观扩展）
 
 ## 输出规范
 

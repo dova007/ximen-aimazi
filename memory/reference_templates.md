@@ -26,6 +26,5 @@ type: reference
 | `interactive-prompts.md` | `references/` | 交互式提示模板 |
 | `plot-structures.md` | `references/` | 10种经典情节结构 |
 | `prompt-guide.md` | `references/` | 提示词完善指南 |
-| `examples.md` | `references/` | 完整示例集 |
 
 ---

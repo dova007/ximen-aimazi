@@ -297,7 +297,7 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 |------|------|---------|
 | `continuation-engine.md` | 续写引擎完整规范（14章） | 续写模式激活时 |
 | `continuation-interaction.md` | 续写交互决策点模板 | 续写模式激活时 |
-| `reverse-parsing-guide.md` | CP1 反向解析操作指南 | CP1 阶段 |
+| `continuation-engine.md` | 续写引擎与CP1操作指南 | 续写模式激活 |
 | `style-fingerprint-guide.md` | 风格指纹比对与漂移控制 | Phase 11-12（续写） |
 
 ### 题材风格模块
@@ -305,7 +305,6 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 | 文件 | 内容 | 何时加载 |
 |------|------|---------|
 | `style-index.md` | 题材风格总索引 | 查找所需风格模块 |
-| `style-humor.md` | 幽默风格 | 轻松/幽默/沙雕 |
 | `style-suspense.md` | 悬疑/推理/恐怖 | 悬疑/惊悚/推理/恐怖 |
 | `style-romance.md` | 言情/爱情线/后宫 | 言情/甜宠/后宫/虐恋 |
 | `style-combat.md` | 打斗/智斗 | 玄幻/修仙/武侠/高武 |
@@ -314,7 +313,6 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 | `style-fantasy.md` | 奇幻/玄幻/金手指 | 奇幻/玄幻/仙侠 |
 | `style-reality.md` | 现实/世情/新媒体 | 都市/现实/新媒体 |
 | `style-niche.md` | 小众题材 | 轻小说/沙雕/赛博朋克/盘点/模拟/直播 |
-| `style-platform.md` | 平台风格差异 | 了解平台差异 |
 
 ### 写作技法模块
 
@@ -335,22 +333,19 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 
 | 文件 | 内容 |
 |------|------|
-| `female-genre-guide.md` | 女频题材框架、核心情绪、爽点设计 |
-| `female-character-design.md` | 女频角色设计、CP 模式、关系网 |
-| `female-opening-design.md` | 女频开头设计、开局模板、钩子设计 |
+| `female-genre-guide.md` | 女频题材框架、核心情绪、爽点设计、角色设计、开头模板、钩子设计 |
 
 ### 其他核心参考
 
 | 文件 | 内容 |
 |------|------|
-| `anti-ai-detection.md` | 去 AI 味检测清单（按题材分级+频率控制） |
+| `anti-ai-writing.md` | 去 AI 味完整指南（含检测清单+禁用词表） |
 | `quality-check.md` | 质量评分系统 |
 | `editorial-pipeline.md` | 编辑部流水线 |
 | `advanced-audit.md` | 深度审稿清单 |
 | `author-style-guide.md` | 作家技法参考库 |
 | `plot-structures.md` | 剧情结构 |
 | `chapter-outline.md` | 细纲批次化规范 |
-| `examples.md` | 多题材创作示例 |
 | `prompt-guide.md` | 提示词编写指南 |
 
 ## 目录结构
@@ -378,15 +373,14 @@ ximen-aimazi/
 │   ├── style-*.md              # 题材风格模块（11 个）
 │   ├── writing-*.md            # 写作技法模块（2 个）
 │   ├── workflow-interaction.md # 全流程交互决策点规范（v2.3 新增）
-│   ├── continuation-engine.md  # 续写引擎（v2.2 重写）
+│   ├── continuation-engine.md  # 续写引擎（含CP1反向解析，v2.4 整合）
 │   ├── continuation-interaction.md # 续写交互决策点（v2.2.1 新增）
-│   ├── reverse-parsing-guide.md # CP1 反向解析指南（v2.2 新增）
 │   ├── style-fingerprint-guide.md # 风格指纹比对指南（v2.2 新增）
 │   ├── market-*.md             # 商业化模块
 │   ├── creative-*.md           # 创作策略模块
-│   ├── female-*.md             # 女频专项模块（3 个）
+│   ├── female-*.md             # 女频专项模块（1 个）
 │   ├── platform-guide.md       # 平台适配指南
-│   ├── anti-ai-*.md            # 去 AI 味模块（2 个）
+│   ├── anti-ai-*.md            # 去AI味模块（1 个）
 │   └── ...                     # 更多参考资料
 ├── memory/                     # skill 仓库默认/示例记忆
 ├── .learnings/                 # skill 仓库默认/示例事实档案

@@ -774,7 +774,6 @@ Must read all active `.learnings/` files before generating each chapter:
 | `references/narrative-units.md` | Narrative unit design |
 | `references/plot-structures.md` | Plot structure design |
 | `references/advanced-plot-techniques.md` | Advanced plot techniques |
-| `references/examples.md` | Complete examples |
 | `references/interactive-prompts.md` | Step-by-step interactive prompt templates |
 | `references/prompt-guide.md` | Prompt writing methodology |
 
