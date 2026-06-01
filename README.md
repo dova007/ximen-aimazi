@@ -3,7 +3,7 @@
 中文网文创作 Agent Skill — 从灵感到成稿的结构化创作 + 去 AI 味 + 深度技法 + 续写引擎。
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
-[![Version](https://img.shields.io/badge/version-v2.3.3-green)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v2.3.4-green)](./CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ## 这是什么
@@ -20,6 +20,7 @@
 - **v2.2.1**：续写交互增强 — 12 个决策点让你全程掌控续写方向，两种交互模式
 - **v2.3.0 新增**：全流程交互决策点 — 主流程 20 个决策点 + 续写流程 12 个决策点，讨论/快速双模式覆盖从灵感到成稿的每一步
 - **v2.3.3**：通用技能包整改 — 独立小说工作区、模板补齐、正文/追踪路径统一、字数统计修复与分发清理
+- **v2.3.4**：分发可靠性维护 — 单中文入口、客户端展示元数据、参考断链兼容入口与本地校验脚本
 
 ## 适合什么场景
 
@@ -353,7 +354,6 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 ```text
 ximen-aimazi/
 ├── SKILL.md                    # 中文主技能文档
-├── SKILL.en.md                 # 英文文档
 ├── plugin.json                 # Skill 打包配置
 ├── README.md
 ├── CHANGELOG.md
@@ -369,8 +369,8 @@ ximen-aimazi/
 │   ├── PROMPT-TEMPLATE.md      # 提示词空白模板
 │   ├── LEARNINGS-TEMPLATE.md   # 真相档案模板
 │   └── workspace/              # init-novel 使用的项目级模板
-├── references/                 # 按需加载的参考资料（48 个文件）
-│   ├── style-*.md              # 题材风格模块（11 个）
+├── references/                 # 按需加载的参考资料（45 个文件）
+│   ├── style-*.md              # 题材风格模块（10 个）
 │   ├── writing-*.md            # 写作技法模块（2 个）
 │   ├── workflow-interaction.md # 全流程交互决策点规范（v2.3 新增）
 │   ├── continuation-engine.md  # 续写引擎（含CP1反向解析，v2.4 整合）
@@ -380,7 +380,7 @@ ximen-aimazi/
 │   ├── creative-*.md           # 创作策略模块
 │   ├── female-*.md             # 女频专项模块（1 个）
 │   ├── platform-guide.md       # 平台适配指南
-│   ├── anti-ai-*.md            # 去AI味模块（1 个）
+│   ├── anti-ai-*.md / banned-words.md # 去AI味模块（3 个）
 │   └── ...                     # 更多参考资料
 ├── memory/                     # skill 仓库默认/示例记忆
 ├── .learnings/                 # skill 仓库默认/示例事实档案

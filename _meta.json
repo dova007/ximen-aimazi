@@ -1,7 +1,7 @@
 {
   "ownerId": "ximencuisu",
   "slug": "ximen-aimazi",
-  "version": "2.3.3",
-  "publishedAt": 1779379200000,
-  "changelog": "2.3.3: 通用技能包整改，独立小说工作区、模板补齐、路径统一、字数统计修复与分发清理"
+  "version": "2.3.4",
+  "publishedAt": 1780243200000,
+  "changelog": "2.3.4: 收敛单中文入口、补充分发元数据、修复参考断链与校验脚本"
 }

@@ -13,7 +13,7 @@
 > **情感走向**：甜蜜升温 / 虐心 / 误会 / 和好 / 突破
 > **CP进度**：[初遇/相识/暧昧/表白/确认/升温/危机/和好]
 > **情绪曲线**：[甜到齁 / 虐到哭 / 笑中带泪 / 欲罢不能]
-> **写作前调用清单**：memory/project_style.md / CHAPTER-TEMPLATE.female.md / female-genre-guide.md / female-character-design.md / hook-techniques.md / anti-ai-writing.md
+> **写作前调用清单**：memory/project_style.md / CHAPTER-TEMPLATE.female.md / female-genre-guide.md / hook-techniques.md / anti-ai-writing.md
 > **大神技法**：[主参考技法 + 辅参考技法]
 > **钩子类型**：[暧昧钩子 / 误会钩子 / 情绪钩子]
 > **节奏目标**：[情感推进和剧情推进比例]

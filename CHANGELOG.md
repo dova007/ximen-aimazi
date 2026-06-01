@@ -1,5 +1,20 @@
 # 更新日志
 
+## v2.3.4 (2026-06-01)
+
+### 分发可靠性维护
+
+**核心改动**：收敛为单中文入口，补齐客户端展示元数据，并加强本地校验，降低安装、发布和按需加载时的漂移风险。
+
+- 删除英文辅助技能文档，`SKILL.md` 作为唯一技能入口
+- 新增 `agents/openai.yaml`，提供客户端展示名、短描述和默认调用提示
+- 新增 `references/anti-ai-detection.md` 与 `references/banned-words.md` 兼容入口，避免旧引用断链
+- 修复女频模板和文档中指向不存在女频参考文件的调用
+- 新增 `scripts/validate-skill.ps1`，校验版本、单入口、客户端元数据和 Markdown 引用
+- 修正 README 目录统计和 `.claude/CLAUDE.md` 版本口径
+
+---
+
 ## v2.3.3 (2026-05-22)
 
 ### 通用技能包整改
@@ -347,7 +362,6 @@ A含蓄暗示 / B直白热烈 / C文艺唯美 / D暴力美学 / E纯情青涩
 | `scripts/init-novel.bat` | Windows批处理版初始化脚本 |
 | `scripts/word-count.sh` | Linux/Mac字数统计脚本 |
 | `scripts/word-count.bat` | Windows字数统计脚本 |
-| `SKILL.en.md` | 英文版技能文档 |
 | `CHANGELOG.md` | 版本更新日志 |
 
 ---

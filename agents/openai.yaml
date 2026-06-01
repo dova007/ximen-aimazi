@@ -1,0 +1,7 @@
+interface:
+  display_name: "西门爱码子"
+  short_description: "中文网文从灵感到成稿的全流程创作助手"
+  default_prompt: "使用 $ximen-aimazi 帮我从一句话灵感开始，生成 3 套中文网文创意方案。"
+
+policy:
+  allow_implicit_invocation: true
