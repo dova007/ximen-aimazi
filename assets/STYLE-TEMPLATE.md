@@ -176,6 +176,39 @@
 
 ---
 
+### 【文风F】对比学习文风
+
+> **核心理念**：不说你喜欢什么风格，直接给我看——一段你不想要的 + 一段你想要的，AI 自动提取可执行的写作规则。
+
+```markdown
+## 核心特点
+- 基于用户提供的对比样本（AI原文 vs 用户修改文），自动提取风格差异
+- 规则从实例中来，每条规则都有「反例 → 正例」对照
+- 规则优先级高于泛化去AI味规则和题材风格模块
+- 适用于：去AI味优化 / 个人风格固化 / 模仿特定作品/作者风格
+
+## 使用流程
+1. 在 `assets/STYLE-CONTRAST-TEMPLATE.md` 中贴入原文（不想要的）和修改文（想要的）
+2. 要求 AI 按 `references/style-contrast-analysis.md` 的10个维度执行对比分析
+3. AI 输出结构化规则写入 `memory/style_contrast_guide.md`
+4. Phase 4 选择文风F，`memory/project_style.md` 的基础文风填入 F
+5. 后续 Phase 10（正文）和 Phase 12（润色）强制执行对比规则
+
+## 句式要求
+- 由对比分析结果决定，遵循 `memory/style_contrast_guide.md` 中的具体规则
+
+## 禁止事项
+- 由对比分析结果决定，遵循 `memory/style_contrast_guide.md` 中每条规则的「禁止事项」
+
+## 优先级
+- 对比学习文风规则 > 泛化去AI味规则（`anti-ai-writing.md`）> 题材风格模块（`style-*.md`）
+- 当 `memory/style_contrast_guide.md` 中的规则与其他参考冲突时，以对比规则为准
+```
+
+> **内建默认基线**：即使用户未提供对比样本，`memory/style_contrast_guide.md` 中已预置 12 条通用「去AI味写作规则」（基于玄幻/修仙网文常见 AI 味模式提取），开箱即可生效。
+
+---
+
 ## 自定义文风
 
 如果以上预设都不符合需求，在下方自定义你的文风：

@@ -3,7 +3,7 @@
 中文网文创作 Agent Skill — 从灵感到成稿的结构化创作 + 去 AI 味 + 深度技法 + 续写引擎。
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
-[![Version](https://img.shields.io/badge/version-v2.3.4-green)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v2.4.0-green)](./CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ## 这是什么
@@ -21,6 +21,7 @@
 - **v2.3.0 新增**：全流程交互决策点 — 主流程 20 个决策点 + 续写流程 12 个决策点，讨论/快速双模式覆盖从灵感到成稿的每一步
 - **v2.3.3**：通用技能包整改 — 独立小说工作区、模板补齐、正文/追踪路径统一、字数统计修复与分发清理
 - **v2.3.4**：分发可靠性维护 — 单中文入口、客户端展示元数据、参考断链兼容入口与本地校验脚本
+- **v2.4.0 新增**：文风对比学习 — 贴入 AI 原文 + 修改文自动提取 12 条写作规则，续写中段可激活，支持 6 种文风（含 F）
 
 ## 适合什么场景
 
@@ -40,7 +41,7 @@
 | 1 | 灵感生成 — 一句话扩展成 3 套可选方案 |
 | 2 | 世界观构建 — 力量体系、社会结构、核心规则 |
 | 3 | 角色塑造 — 主角 + 配角 + 反派层级 + 三层标签反差 |
-| 4 | 创作参数配置 — 章节数 / 女角色数 / 擦边等级 / 文风 |
+| 4 | 创作参数配置 — 章节数 / 女角色数 / 擦边等级 / 文风（A-F） |
 | 5 | 同人原著资料（如适用）— 搜索或粘贴，建立约束 |
 | 6 | 大纲生成 — 三幕式 + 卷级结构 + 关键节点 |
 | 7 | 细纲规划 — 批次划分、冻结条件、人工介入点 |
@@ -52,7 +53,7 @@
 
 ### 文风控制
 
-5 种预设文风（A-E）+ 作家技法参考（1 主 1 辅）分层叠加，写入 `memory/project_style.md` 全书生效。
+6 种预设文风（A-F）+ 作家技法参考（1 主 1 辅）分层叠加，写入 `memory/project_style.md` 全书生效。
 
 | 文风 | 特点 | 适用题材 |
 |------|------|---------|
@@ -61,6 +62,9 @@
 | C 古风仙侠风 | 文字有古韵、意境深远、战斗写意 | 仙侠、古言、玄侠 |
 | D 悬疑惊悚风 | 氛围压抑、悬念迭起、反转出人意料 | 悬疑、惊悚、末世 |
 | E 轻松日常风 | 轻松幽默、日常有趣、角色互动有爱 | 种田、御兽、日常 |
+| F 对比学习 | 贴入 AI 原文 + 修改文，自动提取 12 条写作规则 | 所有题材去 AI 味 / 风格固化 |
+
+> **文风F（v2.4 新增）**：不说你喜欢什么风格，直接给样本。贴入一段不想要的 AI 原文 + 一段你修改过的正文，AI 自动按 10 个维度提取差异，产出 12 条强制执行规则（开篇冲突切入、金手指平淡化、动作替心理等）。续写模式中段也可激活，无需回到 Phase 4。
 
 ### 去 AI 味
 
@@ -130,7 +134,7 @@
 | DP12-2 | Phase 12 | 评分结果处理 | 停 | 跳过(低于门槛停) |
 | DP12-3 | Phase 12 | 章节完成与下一步 | 停 | 跳过 |
 
-### 续写流程决策点（CP-① ~ CP-⑫）
+### 续写流程决策点（CP-① ~ CP-⑬）
 
 | 编号 | 阶段 | 决策点名称 | 快速模式 |
 |------|------|-----------|---------|
@@ -141,6 +145,7 @@
 | CP-⑤ | CP2 | 节拍审核 | 跳过 |
 | CP-⑥ | CP3 | 锁定理由展示 | **必停** |
 | CP-⑦ | CP3 | 补充遗漏条目 | 跳过 |
+| CP-⑦½ | CP3→Phase 7 | 文风F激活（可选） | 跳过 |
 | CP-⑧ | Phase 7前 | 衔接点确认 | 跳过 |
 | CP-⑨ | Phase 8 | 首章方向选择 | 跳过 |
 | CP-⑩ | Phase 10 | Sample Chapter讨论 | **必停** |
@@ -158,7 +163,7 @@
 | DP9-1 审核结果与方案选择 | 主流程 | 审核发现问题后的方案选择影响后续质量 |
 | DP10-2 章节生成后审核(首章) | 主流程 | 首章定调，必须确认文风和写法达标 |
 
-续写流程的 4 个必停点（CP-④、CP-⑥、CP-⑩、CP-⑪）同理，首章和关键方向不可跳过。
+续写流程的 4 个必停点（CP-④、CP-⑥、CP-⑩、CP-⑪）同理，首章和关键方向不可跳过。CP-⑦½ 文风F激活为可选点，用户贴入对比样本时触发。
 
 ## v2.2 续写引擎
 
@@ -217,6 +222,7 @@
 |------|---------|------|
 | 作家风格参考 | "像某位作家" | 查阅 `references/author-style-guide.md`，提炼可迁移技法 |
 | 续写模式 | "卡文""续写""接着写""旧坑""跨作者""风格漂移" | 激活 CP1→CP2→CP3→Phase 7-12 |
+| 文风对比学习 | "用F文风" / 贴入 AI 原文+修改文 | 10 维对比分析 → 12 条规则写入 `memory/style_contrast_guide.md`，主流程和续写全程可激活 |
 | AI 编辑部流水线 | "像工作室一样立项" | 查阅 `references/editorial-pipeline.md`，按岗位推进 |
 | 深度审稿 | 关键高潮章 / 质量下滑 | 查阅 `references/advanced-audit.md`，排长篇隐患 |
 | 去 AI 味专项 | "太AI了""去味" | 执行内嵌去 AI 味检查项 + 三遍法 |
@@ -279,7 +285,7 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 
 | 阶段 | 必须证明已调用 |
 |------|----------------|
-| Phase 4 参数/文风 | `STYLE-TEMPLATE.md` + `author-style-guide.md`，写入 `memory/project_style.md` |
+| Phase 4 参数/文风 | `STYLE-TEMPLATE.md` + `author-style-guide.md`，写入 `memory/project_style.md`；若选文风F，额外加载 `STYLE-CONTRAST-TEMPLATE.md` + `style-contrast-analysis.md`，写入 `memory/style_contrast_guide.md` |
 | Phase 6 大纲 | 文风圣经、核心爽点循环、期待感链路、高潮递进、大神技法映射 |
 | Phase 8 细纲 | 每章爽点类型、情绪曲线、剧情功能、章首承接、章末钩子、调用技法来源 |
 | Phase 9 审核 | 技法调用完整性，检查是否使用爽点库、钩子库、剧情技法库和文风圣经 |
@@ -300,6 +306,14 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 | `continuation-interaction.md` | 续写交互决策点模板 | 续写模式激活时 |
 | `continuation-engine.md` | 续写引擎与CP1操作指南 | 续写模式激活 |
 | `style-fingerprint-guide.md` | 风格指纹比对与漂移控制 | Phase 11-12（续写） |
+
+### 文风对比学习模块（v2.4 新增）
+
+| 文件 | 内容 | 何时加载 |
+|------|------|---------|
+| `STYLE-CONTRAST-TEMPLATE.md` | 用户自助贴入样本的对比学习模板 | 文风F激活时 |
+| `style-contrast-analysis.md` | 10 维对比分析指南 | 文风F激活时 |
+| `style_contrast_guide.md` | 12 条强制执行写作规则（含预置基线） | Phase 10/12 文风F激活时 |
 
 ### 题材风格模块
 
@@ -348,6 +362,9 @@ git clone https://github.com/ximencuisu/ximen-aimazi.git
 | `plot-structures.md` | 剧情结构 |
 | `chapter-outline.md` | 细纲批次化规范 |
 | `prompt-guide.md` | 提示词编写指南 |
+| `style-contrast-analysis.md` | 文风对比学习 10 维分析指南（v2.4） |
+| `STYLE-CONTRAST-TEMPLATE.md` | 文风对比学习用户模板（v2.4） |
+| `style_contrast_guide.md` | 12 条去 AI 味写作规则集（v2.4） |
 
 ## 目录结构
 
@@ -362,10 +379,11 @@ ximen-aimazi/
 ├── MEMORY.md                   # 记忆索引
 ├── SESSION.md                  # skill 仓库示例会话文件
 ├── assets/
-│   ├── STYLE-TEMPLATE.md       # 5 种预设文风库
+│   ├── STYLE-TEMPLATE.md       # 6 种预设文风库（含 F 对比学习）
 │   ├── EDGE-TEMPLATE.md        # 5 种擦边风格模板
 │   ├── CHAPTER-TEMPLATE.md     # 章节模板
 │   ├── CHAPTER-TEMPLATE.female.md
+│   ├── STYLE-CONTRAST-TEMPLATE.md # 文风对比学习用户模板（v2.4）
 │   ├── PROMPT-TEMPLATE.md      # 提示词空白模板
 │   ├── LEARNINGS-TEMPLATE.md   # 真相档案模板
 │   └── workspace/              # init-novel 使用的项目级模板
@@ -376,13 +394,14 @@ ximen-aimazi/
 │   ├── continuation-engine.md  # 续写引擎（含CP1反向解析，v2.4 整合）
 │   ├── continuation-interaction.md # 续写交互决策点（v2.2.1 新增）
 │   ├── style-fingerprint-guide.md # 风格指纹比对指南（v2.2 新增）
+│   ├── style-contrast-analysis.md # 文风对比学习分析指南（v2.4 新增）
 │   ├── market-*.md             # 商业化模块
 │   ├── creative-*.md           # 创作策略模块
 │   ├── female-*.md             # 女频专项模块（1 个）
 │   ├── platform-guide.md       # 平台适配指南
 │   ├── anti-ai-*.md / banned-words.md # 去AI味模块（3 个）
 │   └── ...                     # 更多参考资料
-├── memory/                     # skill 仓库默认/示例记忆
+├── memory/                     # skill 仓库默认/示例记忆（含 style_contrast_guide.md v2.4）
 ├── .learnings/                 # skill 仓库默认/示例事实档案
 └── scripts/                    # 初始化与字数统计脚本
 ```
