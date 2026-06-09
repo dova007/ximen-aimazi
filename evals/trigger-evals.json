@@ -1,0 +1,34 @@
+[
+  {
+    "query": "帮我用 ximen-aimazi 从一句话灵感开始写一本 200 章玄幻升级文，先出 3 个方向。",
+    "should_trigger": true
+  },
+  {
+    "query": "我这本小说第 45 章写崩了，帮我按已有设定续写，别推翻前面伏笔。",
+    "should_trigger": true
+  },
+  {
+    "query": "这段正文很 AI，帮我按网文口吻去味并评分。",
+    "should_trigger": true
+  },
+  {
+    "query": "我想用文风F，给你一段AI原文和我修改后的版本，请提取写作规则。",
+    "should_trigger": true
+  },
+  {
+    "query": "给我写一个 Python 脚本统计 CSV 的销售额。",
+    "should_trigger": false
+  },
+  {
+    "query": "润色这封英文商务邮件，让语气更礼貌。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我检查 React 组件为什么按钮点不动。",
+    "should_trigger": false
+  },
+  {
+    "query": "总结这篇论文的实验方法和局限。",
+    "should_trigger": false
+  }
+]

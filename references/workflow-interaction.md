@@ -304,6 +304,7 @@
   C. 古风仙侠风
   D. 悬疑惊悚风
   E. 轻松日常风
+  F. 对比学习文风（贴入 AI 原文 + 用户修改文，自动提取规则）
 
 参数5：作家技法参考
   A. AI推荐 1 主 + 1 辅
@@ -312,6 +313,8 @@
 ```
 
 如选择擦边（非"无"）→ 追问擦边描写风格：A 含蓄 / B 直白 / C 文艺 / D 暴力美学 / E 自定义
+
+如选择文风 F → 读取 `assets/STYLE-CONTRAST-TEMPLATE.md` 与 `references/style-contrast-analysis.md`；用户未提供对比样本时，启用 `memory/style_contrast_guide.md` 的预置基线规则。
 
 **选项**：使用当前 Agent 平台的结构化提问能力一次性询问 5 个参数；没有专用工具时用清晰编号列表。启用作家参考后，必须写入 `memory/project_style.md`。
 

@@ -8,7 +8,7 @@ type: reference
 
 | 模板文件 | 位置 | 用途 | 调用时机 |
 |----------|------|------|----------|
-| `STYLE-TEMPLATE.md` | `assets/` | 文风预设库（5种预设+自定义） | 建立 `memory/project_style.md` 时引用 |
+| `STYLE-TEMPLATE.md` | `assets/` | 文风预设库（6种预设+自定义，含F对比学习） | 建立 `memory/project_style.md` 时引用 |
 | `EDGE-TEMPLATE.md` | `assets/` | 擦边描写规范（5种风格+自定义） | 擦边等级非"无"时载入 |
 | `CHAPTER-TEMPLATE.md` | `assets/` | 男频章节模板，含写作前参考调用清单与文风圣经检查 | 生成正文时套用 |
 | `CHAPTER-TEMPLATE.female.md` | `assets/` | 女频（言情）章节模板，含女频参考调用清单与文风圣经检查 | 女频小说时使用 |

@@ -1,0 +1,41 @@
+{
+  "skill_name": "ximen-aimazi",
+  "evals": [
+    {
+      "id": "new_novel_concepts",
+      "prompt": "帮我用 ximen-aimazi 开一本 100 章都市修仙爽文。主角是被家族放弃的炼丹师，先给我 3 套创意方案，不要直接写正文。",
+      "expected_output": "触发主流程 Phase 1，读取题材/市场/提示词参考，输出 3 套创意方案，并停在 DP1-2 等用户选择。",
+      "files": []
+    },
+    {
+      "id": "phase4_style_f",
+      "prompt": "这本书进入参数配置，章节 200，女角色 3 个，擦边少量，文风用 F 对比学习。我会贴 AI 原文和我改过的版本。",
+      "expected_output": "触发 Phase 4，列出 A-F 文风参数，读取 STYLE-CONTRAST-TEMPLATE 与 style-contrast-analysis，并准备写入 memory/style_contrast_guide.md。",
+      "files": []
+    },
+    {
+      "id": "continuation_mode",
+      "prompt": "我有一部写了 30 章的玄幻小说卡住了，主角刚突破金丹，但后面不知道怎么接。帮我续写，不要推翻前文设定。",
+      "expected_output": "触发 Continuation_Mode，进入 CP1 反向解析、CP2 卡点诊断、CP3 不可改动清单确认，而不是直接写正文。",
+      "files": []
+    },
+    {
+      "id": "draft_gate",
+      "prompt": "直接给我写第 12 章正文，项目里还没有冻结细纲。",
+      "expected_output": "执行 Phase 10 门控，发现缺少已冻结批次细纲时拒绝进入正文，并提示回到 Phase 8/9。",
+      "files": []
+    },
+    {
+      "id": "anti_ai_polish",
+      "prompt": "这章太 AI 了，帮我去味，但保留剧情信息和人物关系。",
+      "expected_output": "触发去AI味专项或 Phase 12 润色，读取 anti-ai-writing 和质量检查参考，按限频和动作外化规则改写。",
+      "files": []
+    },
+    {
+      "id": "quick_mode_required_stops",
+      "prompt": "切换快速模式推进这本书，但关键方向还是要让我拍板。",
+      "expected_output": "记录快速模式，并明确 DP1-2、DP4-1、DP9-1、首章 DP10-2 仍为必停点。",
+      "files": []
+    }
+  ]
+}

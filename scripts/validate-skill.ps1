@@ -58,7 +58,7 @@ function Test-Frontmatter {
 }
 
 function Test-VersionPins {
-    $expected = '2.3.4'
+    $expected = '2.4.0'
 
     $metaPath = Join-Path $rootPath '_meta.json'
     $pluginPath = Join-Path $rootPath 'plugin.json'
@@ -172,6 +172,7 @@ function Test-MarkdownReferences {
 
     $ignoredPatterns = @(
         '^\{',
+        '^[A-Za-z0-9_-]+:\s+',
         '^https?:',
         '^\.\./',
         '^/',

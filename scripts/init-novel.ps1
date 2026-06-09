@@ -200,6 +200,7 @@ $TemplateFiles = @(
     ".learnings\SUSPENSE.md",
     "memory\project_params.md",
     "memory\project_style.md",
+    "memory\style_contrast_guide.md",
     (Join-Path $TrackingDirName "CHAPTERS.md"),
     (Join-Path $TrackingDirName $PlotThreadFileName),
     (Join-Path $TrackingDirName $TimelineFileName),

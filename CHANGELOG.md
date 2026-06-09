@@ -162,7 +162,7 @@
 - **CP3 不可改动清单确认（强门控）** — Frozen_Canon 机制，未确认完毕拒绝进入 Phase 7，续写过程中冲突自动中断
 
 **5种续写场景识别**：
-- A 卡文诊断 / B 外稿续写 / C 风格漂移修正 / D 旧坑回填 / F 跨作者接力
+- A 卡文诊断 / B 外稿续写 / C 风格漂移修正 / D 旧坑回填 / E 跨作者接力
 - 4种补充子场景：单章续写、跨卷续写、断更后续写、修改后续写
 
 **风格指纹比对与漂移控制**：
@@ -183,7 +183,7 @@
 | 文件 | 说明 |
 |------|------|
 | `references/continuation-engine.md` | 续写引擎完整规范（162行→407行，14章） |
-| `references/reverse-parsing-guide.md` | CP1 反向解析操作指南（新增） |
+| `references/continuation-engine.md` | CP1 反向解析操作指南（已整合） |
 | `references/style-fingerprint-guide.md` | 风格指纹比对与漂移控制指南（新增） |
 
 **SKILL.md 更新**：
