@@ -39,6 +39,7 @@
 2. **半部小说续写** → 用户卡文或已有半部稿时，读取 `references/continuation-engine.md`
 3. **编辑部流水线** → 用户想像工作室一样推进时，读取 `references/editorial-pipeline.md`
 4. **深度审稿** → 关键章节或精修场景，读取 `references/advanced-audit.md`
+5. **去AI味专项** → "太AI了""去味""deslop"时，执行内嵌去AI味检查项+三遍法，读取 `references/anti-ai-writing.md`
 
 ## 记忆文件（真相档案）
 
