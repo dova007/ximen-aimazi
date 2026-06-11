@@ -1,5 +1,44 @@
 # 更新日志
 
+## v2.5.0 (2026-06-11)
+
+### 架构瘦身与审核清单内嵌
+
+**核心改动**：针对上下文窗口瓶颈做结构性优化——减少正文写作的强制加载量、为审核环节内嵌保底清单、拆分非续写场景的冗余内容、合并高频更新的记忆文件，并新增输出范例文件。
+
+**Phase 10 必读参考降级**：
+- `writing-basics.md` 和 `writing-craft.md` 从正文必读降级为按需加读
+- 核心写作技法已在上轮改造中内嵌至 SKILL.md 速查卡片，内嵌规则作为保底基线始终生效
+- 仅在需要深入讨论环境交互、核心梗迭代等扩展技法时才加载原文件
+- 预期减少约 2000 行强制上下文开销
+
+**Phase 9/11 审核清单内嵌**：
+- Phase 9 新增「核心审核清单（逻辑审核必遵）」：时间线/空间线/人物线/设定线/伏笔线/读感线 6 维 + 技法调用完整性
+- Phase 11 新增「核心审核清单（一致性审核必遵）」：核心一致性/格式一致性/逻辑连贯/技法调用完整性 4 维
+- 审核环节不再完全依赖外部参考文件，内嵌清单作为保底规则始终执行
+
+**续写流程拆出**：
+- SKILL.md 中续写详情（CP1-CP3 表格、5 种场景、文风F激活、12 个决策点）拆至 `references/continuation-overview.md`
+- SKILL.md 保留简短索引（~14行），续写模式激活时按需加载完整规范
+- 非续写场景节省约 40 行常驻上下文
+
+**记忆系统合并**：
+- `PLOT_POINTS.md`（关键情节）+ `SUSPENSE.md`（悬念池）合并为 `PLOT_SUSPENSE.md`
+- 统一更新 SKILL.md、AGENTS.md、CLAUDE.md、MEMORY.md、init 脚本、validate 脚本等 12 个文件
+- 每章生成后少维护一个文件，降低长篇创作的记忆系统负担
+
+**新增输出范例**：
+- `assets/OUTPUT-EXAMPLES.md`：覆盖 Phase 6 大纲摘要、Phase 8 细纲条目、Phase 10 正文开头（合格 vs 不合格对比）、Phase 12 评分报告、调用痕迹 5 个关键输出
+- 为 Agent 提供"好的输出长什么样"的具体参照
+
+**修改文件**：SKILL.md、AGENTS.md、CLAUDE.md、MEMORY.md、README.md、CHANGELOG.md、_meta.json、plugin.json、assets/CHAPTER-TEMPLATE.md、assets/LEARNINGS-TEMPLATE.md、scripts/init-novel.sh、scripts/init-novel.ps1、scripts/validate-skill.ps1、references/advanced-audit.md、references/continuation-engine.md、references/plot-structures.md
+
+**新增文件**：references/continuation-overview.md、assets/OUTPUT-EXAMPLES.md
+
+**删除文件**：.learnings/PLOT_POINTS.md、.learnings/SUSPENSE.md（含 workspace 模板）
+
+---
+
 ## v2.4.0 (2026-06-06)
 
 ### 文风对比学习功能
@@ -422,3 +461,4 @@ A含蓄暗示 / B直白热烈 / C文艺唯美 / D暴力美学 / E纯情青涩
 | v2.3.3 | 通用技能包整改 — 独立工作区 + 模板补齐 + 路径统一 |
 | v2.3.4 | 分发可靠性 — 单入口 + 客户端元数据 + 校验脚本 |
 | v2.4.0 | 文风对比学习 — 6种文风(含F) + 用户样本自动提取规则 |
+| v2.5.0 | 架构瘦身 — Phase 9/11 审核内嵌 + 必读降级 + 续写拆出 + 记忆合并 + 输出范例 |

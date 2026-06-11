@@ -1,7 +1,7 @@
 {
   "ownerId": "ximencuisu",
   "slug": "ximen-aimazi",
-  "version": "2.4.0",
-  "publishedAt": 1780243200000,
-  "changelog": "2.4.0: 文风对比学习功能 — 6种文风(含F对比学习)、用户样本自动提取规则、续写全程可激活、12条预置去AI味规则"
+  "version": "2.5.0",
+  "publishedAt": 1781222400000,
+  "changelog": "2.5.0: 架构瘦身与技法内嵌 — Phase 9/11 审核清单内嵌、Phase 10 必读参考降级、续写流程拆出、记忆系统合并、输出范例新增"
 }

@@ -29,12 +29,11 @@
 - `追踪/CHAPTERS.md`
 - `.learnings/CHARACTERS.md`
 - `.learnings/LOCATIONS.md`
-- `.learnings/PLOT_POINTS.md`
+- `.learnings/PLOT_SUSPENSE.md`
 - `.learnings/STORY_BIBLE.md`
 - `.learnings/RESOURCES.md`
 - `.learnings/SUBPLOTS.md`
 - `.learnings/EMOTIONS.md`
-- `.learnings/SUSPENSE.md`
 
 ---
 

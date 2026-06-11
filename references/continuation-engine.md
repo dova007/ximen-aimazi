@@ -494,7 +494,7 @@ Frozen_Canon 区非空且所有条目已确认 → 可进入 Phase 7
 - 续写前先读 `SESSION.md`
 - 如果续写涉及新设定，同步写入 `STORY_BIBLE.md`
 - 如果续写改变子剧情状态，同步更新 `SUBPLOTS.md`
-- 如果回收或新增悬念，同步更新 `SUSPENSE.md`
+- 如果回收或新增悬念，同步更新 `PLOT_SUSPENSE.md`
 - 如果调整资源与战力，更新 `RESOURCES.md`
 
 续写模式不是绕开 `ximen-aimazi` 的流程，而是在已有长篇系统上做"卡文救援"。
@@ -507,7 +507,7 @@ Frozen_Canon 区非空且所有条目已确认 → 可进入 Phase 7
 | `设定/角色/{角色名}.md` | `CHARACTERS.md` |
 | `设定/世界观/背景设定.md` | `LOCATIONS.md` |
 | `设定/世界观/力量体系.md` | `STORY_BIBLE.md` + `RESOURCES.md` |
-| `追踪/伏笔.md` | `SUSPENSE.md` + `PLOT_POINTS.md` |
+| `追踪/伏笔.md` | `PLOT_SUSPENSE.md` |
 
 ### Frozen_Canon 与 Phase 8/10/11 的冲突检测机制
 

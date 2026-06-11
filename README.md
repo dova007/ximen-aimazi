@@ -3,7 +3,7 @@
 中文网文创作 Agent Skill — 从灵感到成稿的结构化创作 + 去 AI 味 + 深度技法 + 续写引擎。
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-blue)](https://agentskills.io)
-[![Version](https://img.shields.io/badge/version-v2.4.0-green)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v2.5.0-green)](./CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ## 这是什么
@@ -22,6 +22,7 @@
 - **v2.3.3**：通用技能包整改 — 独立小说工作区、模板补齐、正文/追踪路径统一、字数统计修复与分发清理
 - **v2.3.4**：分发可靠性维护 — 单中文入口、客户端展示元数据、参考断链兼容入口与本地校验脚本
 - **v2.4.0 新增**：文风对比学习 — 贴入 AI 原文 + 修改文自动提取 12 条写作规则，续写中段可激活，支持 6 种文风（含 F）
+- **v2.5.0 新增**：架构瘦身与审核内嵌 — Phase 9/11 审核清单内嵌、Phase 10 必读参考降级（减少约 2000 行上下文开销）、续写流程拆出、记忆文件合并、输出范例新增
 
 ## 适合什么场景
 
@@ -396,12 +397,14 @@ ximen-aimazi/
 │   ├── CHAPTER-TEMPLATE.md     # 章节模板
 │   ├── CHAPTER-TEMPLATE.female.md
 │   ├── STYLE-CONTRAST-TEMPLATE.md # 文风对比学习用户模板（v2.4）
+│   ├── OUTPUT-EXAMPLES.md      # 各阶段输出范例（v2.5 新增）
 │   ├── PROMPT-TEMPLATE.md      # 提示词空白模板
 │   ├── LEARNINGS-TEMPLATE.md   # 真相档案模板
 │   └── workspace/              # init-novel 使用的项目级模板
-├── references/                 # 按需加载的参考资料（46 个文件）
+├── references/                 # 按需加载的参考资料（47 个文件）
 │   ├── style-*.md              # 题材风格模块（11 个）
 │   ├── writing-*.md            # 写作技法模块（2 个）
+│   ├── continuation-overview.md # 续写流程概览（v2.5 拆出）
 │   ├── workflow-interaction.md # 全流程交互决策点规范（v2.3 新增）
 │   ├── continuation-engine.md  # 续写引擎（含CP1反向解析，v2.4 整合）
 │   ├── continuation-interaction.md # 续写交互决策点（v2.2.1 新增）

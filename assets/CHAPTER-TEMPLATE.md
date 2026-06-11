@@ -48,7 +48,7 @@
 - [ ] 角色状态与 `CHARACTERS.md` 一致（等级、伤势、位置）
 - [ ] 地点描写与 `LOCATIONS.md` 一致
 - [ ] 未违反 `STORY_BIBLE.md` 中的设定规则
-- [ ] 未与 `PLOT_POINTS.md` 中已有情节矛盾
+- [ ] 未与 `PLOT_SUSPENSE.md` 中已有情节矛盾
 
 ### 质量检查
 - [ ] 本章有明确的爽点或情节推进
@@ -70,7 +70,7 @@
 - [ ] 新角色已记录到 `CHARACTERS.md`
 - [ ] 角色状态变化已更新
 - [ ] 新地点已记录到 `LOCATIONS.md`
-- [ ] 关键情节已记录到 `PLOT_POINTS.md`
+- [ ] 关键情节已记录到 `PLOT_SUSPENSE.md`
 - [ ] 如有关键场景，已生成图解
 
 ---

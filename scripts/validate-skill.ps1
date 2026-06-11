@@ -58,7 +58,7 @@ function Test-Frontmatter {
 }
 
 function Test-VersionPins {
-    $expected = '2.4.0'
+    $expected = '2.5.0'
 
     $metaPath = Join-Path $rootPath '_meta.json'
     $pluginPath = Join-Path $rootPath 'plugin.json'
@@ -185,11 +185,10 @@ function Test-MarkdownReferences {
         '^EMOTIONS\.md$',
         '^ERRORS\.md$',
         '^LOCATIONS\.md$',
-        '^PLOT_POINTS\.md$',
+        '^PLOT_SUSPENSE\.md$',
         '^RESOURCES\.md$',
         '^STORY_BIBLE\.md$',
-        '^SUBPLOTS\.md$',
-        '^SUSPENSE\.md$'
+        '^SUBPLOTS\.md$'
     )
 
     $missing = New-Object System.Collections.Generic.HashSet[string]
